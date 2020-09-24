@@ -6,16 +6,19 @@ class Prime
   end
 
   def prime_sift()
-    @num_list.each do |prime|
-      if (prime != @prime && prime % @prime == 0) 
-        @num_list.delete(prime)
+    while @prime < @number do
+      @num_list.each do |prime|
+        if (prime != @prime && prime % @prime == 0) 
+          @num_list.delete(prime)
+        end
       end
+      @prime +=1
     end
     return @num_list
   end
 end
 
-
+# while @prime < number, keep running
 # @num_list.select! {|a| a == @prime ? a : a%@prime == 0 }
 
 
