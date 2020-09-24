@@ -6,7 +6,7 @@ class Prime
   end
 
   def prime_sift()
-   
+   return @num_list
   end
 end
 
