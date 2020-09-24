@@ -19,7 +19,7 @@ describe('Prime#prime_sift') do
 
   it('will return an array of numbers between 2 and the inputted number, with prime multiples removed') do
     prime = Prime.new(21)
-    expect(prime.prime_sift).to(eq([2,3,5,7,11,13,17]))
+    expect(prime.prime_sift).to(eq([2,3,5,7,11,13,17,19]))
   end
 
 end
