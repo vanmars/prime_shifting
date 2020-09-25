@@ -7,18 +7,10 @@ class Prime
 
   def prime_sift()
     while @prime < @input do
-      @num_list.each do |number|
-        if (number != @prime && number % @prime == 0) 
-          @num_list.delete(number)
-        end
-      end
+      @num_list = @num_list.select {|number| number == @prime || number % @prime != 0}
       @prime +=1
     end
     return @num_list
   end
-end
-
-
-
-
   
+end
